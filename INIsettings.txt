@@ -1,0 +1,410 @@
+# UE source code was referenced to confirm most of these settings are still have an effect and settings were benchmarked in game but even then these settings can be unstable or have issues so use the settings you can tolerate. Some settings are counterintuitive or poorly documented in the settings guide and source code.  Also some settings depend on the capability of your hardware so confirm it can handle them.
+
+[ConsoleVariables]
+r.ForceAllCoresForShaderCompiling=1
+r.volumetricrendertarget=1 ; Better fps over 0 but worse quality but might not apply
+r.volumetricrendertarget.mode=0 ; Slightly faster but if distracting 2 has no flicker.
+r.volumetricrendertarget.upsamplingmode=2 ; Not as distracting but might not apply
+fx.niagaraallowruntimescalabilitychanges=1
+
+# QUALITY
+
+# BASELINE SETTINGS
+# r.defaultbackbufferpixelformat=3 ;washed out
+# MAX QUALITY MODE
+r.maxqualitymode=1
+r.Shadow.MinResolution=16
+r.Shadow.FadeResolution=1
+r.Shadow.MinPreShadowResolution=16
+r.Shadow.PreShadowFadeResolution=1
+r.Shadow.TexelsPerPixel=4.0
+r.Shadow.PreShadowResolutionFactor=1.0
+# MAX QUALITY MODE
+sg.postprocessquality=3 ; 4 is cinematic and is extremely costly
+sg.effectsquality=3
+sg.foliagequality=5
+sg.shadowquality=3
+sg.texturequality=5
+sg.viewdistancequality=5
+sg.reflectionquality=3
+sg.shadingquality=5
+sg.globalilluminationquality=0 ; lumen and other costly ue5 features. Use 2 minimum for lumen.
+r.ambientocclusion.method=1 ; 0 ssao 1 gtao fps cost
+#r.shadow.distancescale=4
+#r.shadow.spotlighttransitionscale=4096
+r.shadow.maxcsmresolution=4096 ; Costly affects visuals a lot. 16384 is best quality. Costlier than cascades. 4096 seems balanced.
+# BASELINE SETTINGS
+
+# FROM SG EFFECTS QUALITY 0
+r.translucencylightingvolume.dim=24
+r.translucencylightingvolume.blur=0
+r.skyatmosphere.aerialperspectivelut.samplecountmaxperslice=1
+r.skyatmosphere.aerialperspectivelut.depthresolution=8.0
+r.skyatmosphere.fastskylut.samplecountmin=2.0
+r.skyatmosphere.fastskylut.samplecountmax=16.0
+r.skyatmosphere.samplecountmin=2.0
+r.skyatmosphere.samplecountmax=16.0
+r.skyatmosphere.transmittancelut.usesmallformat=1
+r.heterogeneousvolumes=0
+# FROM SG EFFECTS QUALITY 0
+
+
+foliage.loddistancescale=1
+r.allowlandscapeshadows=1
+r.capsuleindirectshadows=1
+r.d3d11.depth24bit=0
+r.d3d12.depth24bit=0
+r.discardunusedquality=0
+r.filmgrain=0
+r.forcehighestmiponuitextures=1
+r.fxaa.quality=5
+r.geometrycollection.nanite=1
+r.gpuparticle.simulate=1
+r.hairstrands.lightsampleformat=0
+r.meshdrawcommands.parallelpasssetup=1
+r.mipmaplodbias=0
+r.mobile.floatprecisionmode=2
+r.mobile.propagatealpha=1
+r.mobile.scenecolorformat=1
+r.postprocessing.downsamplequality=1
+r.shadow.shadowmapsrenderearly=1 ; set 0 with virtual shadows
+r.skeletalmeshlodbias=0
+r.skyatmosphere.lut32=1
+r.sss.sampleset=2
+r.streaming.fullyloadusedtextures=1
+r.streaming.mipbias=0
+r.subsurfacescattering=1
+r.temporalaa.historyscreenpercentage=200
+r.temporalaa.r11g11b10history=0
+r.tsr.16bitvalu.nvidia=0
+r.tsr.16bitvalu=0
+r.tsr.alphachannel=1
+r.tsr.history.r11g11b10=0
+r.tsr.resurrection.persistentframecount=2
+r.tsr.resurrection.persistentframeinterval=1
+r.upscale.quality=3
+r.vrs.contrastadaptiveshading=0
+r.vrs.enable=0
+r.vrs.enableimage=1
+r.vt.maxanisotropy=16
+s.continuouslyincrementalgcwhilelevelspendingpurge=0
+# QUALITY
+
+# OPTIMIZE
+a.forceparallelanimupdate=1
+d3d11.zerobuffersizeinmb=64
+# d3d12.poolallocator.readonlytexturemaxallocationsize=34359738368
+d3d12.psoprecache.keeplowlevel=1
+# d3d12.readonlytextureallocator.maxpoolsize=34359738368
+d3d12.useupdatetexture3dcomputeshader=1
+# d3d12.vrambufferpooldefrag.maxcopysizeperframe=34359738368
+d3d12.vrambufferpooldefrag=0
+# d3d12.vramtexturepooldefrag.maxcopysizeperframe=34359738368
+d3d12.vramtexturepooldefrag=0
+d3d12.zerobuffersizeinmb=64
+foliage.maxocclusionqueriespercomponent=128
+fx.allowasynctick=1
+fx.allowfastpathfunctionlibrary=1
+fx.forceniagaratranslatorsinglethreaded=0
+fx.fxallowparticlemeshlods=1
+fx.gpuspawnwarningthreshold=2000000
+fx.niagara.emitter.computepsoprecachemode=2
+fx.niagara.rendertarget2d.simcachecompressed=0
+fx.niagara.rendertargetvolume.simcachecompressed=0
+fx.niagarabatcher.freebufferearly=0
+fx.skipvectorvmbackendoptimizations=0
+gc.assetclustreringenabled=true
+gc.creategcclusters=1
+grass.grassmap.useasyncfetch=1
+interchange.featureflags.translator.useworker.fbx=1
+landscape.heightmapcompressionmode=-1
+net.allowasyncloading=1
+net.delayunmappedrpcs=1
+net.dormancyenable=0
+net.iris.enabledeltacompression=0
+net.oodleminsizeforcompression=2147483647
+net.shareserializeddata=0
+niagara.createshadersonload=1
+niagara.ribbon.gpuallocatemaxcount=1
+p.chaos.cache.compresstracksafterrecording=0
+p.chaos.joint.ispc=1
+p.clothphysics.usetaskthread=1
+p.findallintersectionssinglethreaded=0
+precompilethreadpoolpercentofhardwarethreads=100
+r.ambientocclusion.asynccomputebudget=4
+r.aocomputeshadernormalcalculation=1
+r.cullbeforefetch=1
+r.customdepthenablefastclear=1
+r.d3d12.raytracing.gpuvalidation=1
+r.d3d12.raytracing.specializestateobjects=1
+r.decal.stencilsizethreshold=0
+r.deferred.useslightfunctionatlas=1
+r.deferskeletaldynamicdataupdateuntilgdme=1
+r.distancefields.brickatlasmaxsizez=16384
+r.distancefields.maxindirectionatlassizexyz=16384
+r.distancefields.maxpermeshresolution=1024
+r.distancefields.parallelupdate=1
+r.earlyzpassmovable=1
+r.enableasynccomputetranslucencylightingvolumeclear=1
+r.forcescenehasdecals=1
+# r.gpuscene.maxpooleduploadbuffersize=22548578304
+r.gpuscene.parallelupdate=1
+r.hairstrands.continuousdecimationreordering=1
+r.hairstrands.deepshadow.injectvoxeldepth=1
+r.hairstrands.visibility.computeraster.culling=1
+r.hairstrands.visibility.computeraster=1
+r.hairstrands.visibility.sortbydepth=1
+r.hairstrands.visibility.tilecompaction=1
+r.hairstrands.visibility.usehwraster=1
+r.heightfields.visibilityatlastilesize=1024
+r.heterogeneousvolumes.shadows.useavsmcompression=0
+r.iesatlas.resolution=16384
+r.instancedstaticmeshes.forceremoveatswap=1
+r.mobile.scenedepthaux=2
+r.postprocessing.forceasyncdispatch=1
+r.primitivehastileoffsetdata=0
+r.pso.precompilethreadpoolpercentofhardwarethreads=100
+r.psoprecache.customdepth=2
+r.psoprecache.ditheredlodfadingoutmaskpass=1
+r.psoprecache.globalcomputeshaders=1
+r.psoprecache.lightmappolicymode=0
+r.psoprecache.translucencyallpass=1
+r.rdg.transientallocator.indirectargumentbuffers=1
+r.rectlightatlas.maxtextureratio=16384
+r.sceneculling.treatinstanceddynamicasuncullable=0
+r.scenerendertargetresizemethod=2
+r.scenerendertargetresizemethodforceoverride=1
+r.shadercompiler.maxjobcachememorymb=0
+r.shadercompiler.maxjobcachememorypercent=0
+r.shadercompiler.parallelinprocess=1
+r.shadercompiler.toolongiothresholdseconds=0
+r.shadercomplexity.cacheshaders=1
+r.shaderpipelinecache.alwaysgenerateoscache=0
+r.shaderpipelinecache.saveusercache=1
+r.shaderpipelinecache.startupmode=3
+r.shaders.skipcompression=1
+r.shadow.alwaysallocatemaxresolutionatlases=1
+r.shadow.csmscissoroptim=1
+r.shadow.virtual.distantlightforcecachefootprintfraction=1
+# r.shadow.virtual.maxphysicalpages=8192
+r.shadow.virtual.nonnanite.usehzb=0
+r.shadow.virtual.usehzb=0
+r.skincache.recomputetangents=1
+r.sss.burley.enableprofileidcache=1
+r.sss.burley.mingeneratemipstilecount=0
+r.stencillodmode=2
+r.streaming.allowparallelstreamingrenderassets=1
+r.streaming.overlapassetandlevelticks=1
+r.streaming.parallelrenderassetsnumworkgroups=4 ; 2 default
+# .streaming.poolsize.vrampercentageclamp=24576
+r.streaming.poolsize=-1
+r.streaming.poolsizeformeshes=-1
+r.streaming.useallmips=1
+r.streaming.useasyncrequestsforddc=1
+r.streaming.usenewmetrics=1
+r.tsr.asynccompute=3
+r.useclustereddeferredshading=1
+r.virtualtexturereducedmemory=0
+r.visibility.frustumcull.useoctree=1
+r.visibility.frustumcull.usespheretestfirst=1
+r.volumetriccloud.emptyspaceskipping=1
+r.volumetricrendertarget.preferasynccompute=1
+r.vt.avt.maxpageresidency=95
+r.vt.maxuploadsperframe.streaming=-1
+r.vt.parallelfeedbacktasks=1
+r.vt.poolautogrow=1
+r.warpculling=1
+s.adaptiveaddtoworld.enabled=1
+s.asyncloadingusefulltimelimit=1
+s.forcegcafterlevelstreamedout=0
+slate.ballowthrottling=0
+tick.doasyncendofframetasks=1
+
+
+# OVERRIDES
+
+# REDUCE RESOLUTION
+# r.viewhastileoffsetdata=0 ; might crash
+r.bloom.screenpercentage=50
+r.capsuleshadowsfullresolution=0
+r.dffullresolution=0
+r.diffuseindirect.halfres=2 ; apparently downscale factor so 0 1 and 2.
+r.gbufferformat=1 ; might crash. costly and hard to notice. 0 has occasional banding.
+r.gtao.downsample=1
+r.lightshaftdownsamplefactor=8
+r.localfogvolume.halfresolution=1
+r.postprocessing.quarterresolutiondownsample=2
+r.postprocessingcolorformat=0 ; 1 might be costly
+r.raytracing.skylight.screenpercentage=50
+r.scenecolorformat=4 ; fps cost but 4 is virtually free
+r.ssgi.halfres=1 ; r.diffuseindirect.halfres in ue5 and enabled by default.
+r.ssr.halfresscenecolor=1
+# REDUCE RESOLUTION
+
+
+# CACHE AND MEMORY
+r.psoprecaching=1
+r.rendertargetpoolmin=2048
+r.shadow.wholesceneshadowcachemb=512
+r.streaming.limitpoolsizetovram=0
+# CACHE AND MEMORY
+
+# LIGHTING
+#r.defaultfeature.ambientocclusion=0 ; one of the costliest effects
+#r.lumen.screenprobegather.referencemode=1
+#r.shadow.distancescale=4
+#r.shadow.spotlighttransitionscale=4096
+#r.shadow.transitionscale=4096
+r.ambientocclusion.depthboundstest=1
+r.ambientocclusionlevels=3
+r.ambientocclusionmaxquality=-1
+r.ambientocclusionradiusscale=0.3
+r.ambientocclusionstaticfraction=1
+r.aoapplytostaticindirect=0
+r.aomaxviewdistance=10000.0
+r.aoquality=0 ; supposed to affect dfao only
+r.aoupdateglobaldistancefield=1
+r.bloomquality=4
+r.depthoffieldquality=0 ; high fps cost for postproc 4
+r.diffuseindirect.denoiser=0 ; Noisy but significant frametime reduction with ssgi.
+r.distancefieldao=0
+r.distancefieldshadowing=0
+r.dynamicglobalilluminationmethod=0 ; Affects visuals if ssgi or lumen is default.
+r.eyeadaptationquality=3 ; might be required for some
+r.fog=0
+r.gtao.falloffend=60 ; Seems like an object thickness setting. 60 seems okay.
+r.gtao.numangles=3 ; Costly, 3 is similar in cost to ssao
+r.gtao.pausejitter=1
+r.gtao.spatialfilter=0 ; looks okay with lower numangles but still has overhead. cheaper than numangles too.
+r.gtao.temporalfilter=0
+r.gtao.temporalfilter=0 ; still active at 0 and no noticable difference
+r.gtao.thicknessblend=0
+r.gtao.upsample=0
+r.gtao.usenormals=1 ; gbuffer 1 is supposedly higher quality but also supposedly capped to 2 numangles.
+r.lensflarequality=0 ; high fps cost for postproc 4
+r.lightfunctionatlas.size=1
+r.lightfunctionatlas.slotresolution=16384
+r.lightshaftquality=0 ; might sometimes be broken
+r.lumen.hardwareraytracing=1
+r.motionblur.amount=0
+r.motionblurquality=0
+r.particlelightquality=0 ; Can stutter on some effects if not 0. Highest is 2.
+r.reflectionenvironment=1 ; 2 broken in editor
+r.scenecolorfringe.max=0
+r.separatetranslucencyupsamplemode=1
+r.shadow.csm.maxcascades=4 ; Costly affects visuals a lot
+r.shadow.csmcaching=0 ; Significant frametime cost.
+r.shadow.filtermethod=0 ; PCSS costly and noisy.
+r.shadow.virtual.enable=0
+r.shadow.virtual.onepassprojection.maxlightsperpixel=8
+r.skyatmosphere.fastskylut=1
+r.skylight.realtimereflectioncapture=0
+r.skylightintensitymultiplier=0.65
+r.ssgi.enable=0 ; Removed in ue5, use dynamicglobalillumination
+r.ssgi.quality=1
+r.ssr.quality=0 ; fps cost even at 1. 4 is equivalent to 1 in cost too.
+r.ssr.stencil=0 ; Slower
+r.sss.burley.numsamplesoverride=0
+r.sss.burley.quality=1
+r.sss.checkerboard=2
+r.sss.halfres=0
+r.sss.quality=1
+r.translucencyvolumeblur=0
+r.volumetriccloud.distancetosamplemaxcount=18
+r.volumetriccloud.samplemincount=2
+r.volumetriccloud.shadow.reflectionraysamplemaxcount=2
+r.volumetriccloud.shadow.viewraysamplemaxcount=6 ; Costly for shadows on clouds. Default of 80 so around 1.2ms cost.
+r.volumetriccloud.shadowmap.maxresolution=4
+r.volumetriccloud.shadowmap.raysamplemaxcount=2
+r.volumetriccloud.shadowmap=0
+r.volumetriccloud.viewraysamplemaxcount=8 ; Costly grainy clouds though ~48-64 is good enough but costly.
+r.volumetriccloud=0 ; disable clouds for a gain in fps
+r.volumetriccloud.support=0
+r.volumetricfog=0
+# LIGHTING
+
+# FX AND NIAGARA
+fx.maxcpuparticlesperemitter=7500
+fx.maxgpuparticlesspawnedperframe=25000
+fx.maxniagaracpuparticlesperemitter=15000
+fx.maxniagaragpuparticlesspawnperframe=50000
+niagara.gpuculling.cputogputhreshold=7500
+niagara.gpusorting.cputogputhreshold=7500
+# FX AND NIAGARA
+
+# COMPUTE
+gc.multithreadeddestructionenabled=1
+r.decal.visibility.multithreaded=1
+r.enablecomputebuildhzb=0 ; slower than pipeline version
+r.hzbocclusion=0 ; hardware version is faster than software
+r.instanceculling.forceinstanceculling=0 ; costly
+r.AllowOcclusionQueries=1 ; Sometimes slower, sometimes faster.
+r.instanceculling.occlusioncull=1 ; disabled by default but significant peformance increase.
+r.instanceculling.occlusionqueries=1
+r.oit.sortedpixels.enable=0 ; costly
+r.oit.sortedpixels=0 ; costly
+r.oit.sortedtriangles=0 ; costly
+r.parallelbasepass=1
+r.parallelgathershadowprimitives=1
+r.parallelinitdynamicshadows=1
+r.parallelprepass=0 ; slower
+r.parallelshadows=0 ; slower
+r.parallelsinglelayerwaterpass=1
+r.paralleltranslucency=0 ; slower
+r.parallelvelocity=1
+r.rdg.asynccompute=1 ; 2 sets all as async and runs worse.
+r.rdg.parallelexecute.passmax=48 ; 48 is slightly faster than default 32
+r.rdg.parallelexecute.passmin=36
+r.rdg.parallelexecute=0 ; seems like parallel is always slower.
+r.rdg.transientallocator=0 ; slower
+r.rdg.transientextractedresources=0 ; slower
+r.scenedepthhzbasynccompute=0 ; slower than pipeline version.
+r.skyatmosphereasynccompute=0 ; slower than pipeline version
+r.Lumen.AsyncCompute=0 ; Slower.
+# COMPUTE
+
+# LATENCY
+r.fullscreenmode=1 ; 1 seems to be faster
+r.oneframethreadlag=0 ; 1 reduces cpu limitation but increases latency.
+t.maxfps=999
+# LATENCY
+
+# ETC
+#r.vt.anisotropicfiltering=1 ; might crash
+r.AreShaderErrorsFatal=false
+r.Nanite.ProjectEnabled=False
+r.Substrate=False
+r.antialiasingmethod=0
+r.defaultfeature.antialiasing=0
+r.maxanisotropy=16
+r.meshstreaming=1
+r.nanite.asyncrasterization.shadowdepths=1
+r.nanite.culling.hzb=0
+r.nanite.culling.twopass=0
+r.nanite.customdepth=1
+r.nanite.dicingrate=0
+r.Nanite.MaxPixelsPerEdge=0
+r.nanite=0
+# r.screenpercentage=200 ; Supersampling and has a huge fps cost.
+r.texturestreaming=0 ; Turns off texture streaming and caches textures in vram if vram is plentiful but can be bad on lower vram gpus.
+r.tonemapper.quality=1 ; No vignette
+r.tonemapper.sharpen=0
+r.AreShaderErrorsFatal=false
+
+# ETC
+
+# Possibly unstable
+r.dbuffer=0 ; Cost. Off can break effects.
+r.postprocessing.propagatealpha=0 ; Cost but might affect visuals.
+r.postprocessing.prefercompute=1 ; hdr might break with some tools such as renodx unless 0. 0 is also slower.
+# fx.niagara.qualitylevel ; breaks some effects
+r.translucencylightingvolume=0 ; fps gain but can crash
+r.volumetriccloud.reflectionraysamplemaxcount=6 ; Might break reflections. 6 seems same as default 80.
+# r.separatetranslucency=0 ; Off breaks effects.
+; r.separatetranslucencyscreenpercentage=50 ; Slower than 100. Also breaks effects.
+r.translucency.dynamicres.maxscreenpercentage=50 ; Slower than 100. Also breaks effects.
+r.ambientocclusion.compute=1 ; above 1 breaks shadow rendering
+r.virtualtexture=0 ; might break
+r.virtualtextures=0 ; 1 breaks shadows
+
+# Possibly unstable

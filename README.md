@@ -1,4 +1,4 @@
-Collection of ini settings that can help performance and/or visuals. Seems to work in unreal engine 5 and 4 but some settings are different or were not added yet. Settings were benchmarked and source code was referenced to confirm settings still have an effect. Even so these settings can be unstable or have issues so use what you need. Some settings also depend on the capabilities of your hardware so confirm compatibility. I hope these settings can help you extract more from your hardware in unreal engine.
+Collection of ini settings that can help performance and/or visuals. Seems to work in unreal engine 5 and 4 but some settings are different or were not added yet. Settings were benchmarked and source code was referenced to confirm settings still have an effect. Even so these settings can be unstable or have issues so use what you need. Some settings also depend on the capabilities of your hardware so confirm compatibility. I hope these settings can help you extract more from your hardware in unreal engine. Use at your own responsibility.
 
 Results:
 

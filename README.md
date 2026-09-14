@@ -15,4 +15,4 @@ Also tested on a laptop and made a game go from 4k ~30fps to above 60fps. Around
 
 Unreal Engine 4: 
 1440p at 2560x1440 went from ~450fps or ~2.2ms to ~750fps or ~1.3ms
-1440p at 2560x1440 supersampled to 5120x2800 by using r.screenpercentage 200 went from ~140fps or ~7.0ms to ~300fps or ~3.5ms.
+1440p at 2560x1440 supersampled to 5120x2880 by using r.screenpercentage 200 went from ~140fps or ~7.0ms to ~300fps or ~3.5ms.

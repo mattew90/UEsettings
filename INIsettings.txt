@@ -198,7 +198,7 @@ r.stencillodmode=2
 r.streaming.allowparallelstreamingrenderassets=1
 r.streaming.overlapassetandlevelticks=1
 r.streaming.parallelrenderassetsnumworkgroups=4 ; 2 default
-; .streaming.poolsize.vrampercentageclamp=24576
+; r.streaming.poolsize.vrampercentageclamp=24576
 r.streaming.poolsize=-1
 r.streaming.poolsizeformeshes=-1
 r.streaming.useallmips=1
@@ -374,7 +374,7 @@ t.maxfps=999
 ; ETC
 ; r.vt.anisotropicfiltering=1 ; might crash
 r.AreShaderErrorsFatal=false
-r.Nanite.ProjectEnabled=False
+; r.Nanite.ProjectEnabled=False ; might crash
 r.Substrate=False
 r.antialiasingmethod=0
 r.defaultfeature.antialiasing=0

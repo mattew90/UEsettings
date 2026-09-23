@@ -395,7 +395,7 @@ r.AreShaderErrorsFatal=false
 ; ETC
 
 ; Possibly unstable
-r.dbuffer=0 ; Cost. Off can break effects.
+; r.dbuffer=0 ; Cost. Off can break effects.
 r.postprocessing.propagatealpha=0 ; Cost but might affect visuals.
 r.postprocessing.prefercompute=1 ; hdr might break with some tools such as renodx unless 0. 0 is also slower.
 ; fx.niagara.qualitylevel ; breaks some effects
@@ -405,6 +405,6 @@ r.volumetriccloud.reflectionraysamplemaxcount=6 ; Might break reflections. 6 see
 ; r.separatetranslucencyscreenpercentage=50 ; Slower than 100. Also breaks effects.
 r.translucency.dynamicres.maxscreenpercentage=50 ; Slower than 100. Also breaks effects.
 r.ambientocclusion.compute=1 ; above 1 breaks shadow rendering
-r.virtualtexture=0 ; might break
-r.virtualtextures=0 ; 1 breaks shadows
+; r.virtualtexture=0 ; might break
+; r.virtualtextures=0 ; 1 breaks shadows
 ; Possibly unstable

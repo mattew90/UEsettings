@@ -361,6 +361,7 @@ r.rdg.transientextractedresources=0 ; slower
 r.scenedepthhzbasynccompute=0 ; slower than pipeline version.
 r.skyatmosphereasynccompute=0 ; slower than pipeline version
 ; r.Lumen.AsyncCompute=0 ; Sometimes slower.
+r.stencilforloddither=0 ; Slower. Apparently disables early z.
 ; COMPUTE
 
 ; LATENCY

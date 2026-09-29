@@ -377,6 +377,10 @@ r.antialiasingmethod=0
 r.defaultfeature.antialiasing=0 ; Might break effects
 r.maxanisotropy=16
 r.meshstreaming=1
+r.Nanite.PersistentThreadsCulling=1
+r.Nanite.SoftwareVRS=1
+; r.Nanite.ComputeRasterization=0 ; Sometimes slower
+; r.Nanite.Culling.TwoPass=0 ; Sometimes slower
 ; r.Nanite.MaxPixelsPerEdge=0 ; Might be slower
 ; r.nanite=0 ;Might crash
 ; r.screenpercentage=200 ; Supersampling and has a huge fps cost.
@@ -388,7 +392,7 @@ r.AreShaderErrorsFatal=false
 
 ; Possibly unstable
 ; r.dbuffer=0 ; Cost. Off can break effects.
-r.postprocessing.propagatealpha=0 ; Cost but might affect visuals.
+; r.postprocessing.propagatealpha=0 ; Cost but might affect visuals. Might crash.
 r.postprocessing.prefercompute=1 ; hdr might break with some tools such as renodx unless 0. 0 is also slower.
 ; fx.niagara.qualitylevel ; breaks some effects
 r.translucencylightingvolume=0 ; fps gain but can crash

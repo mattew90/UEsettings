@@ -76,7 +76,7 @@ r.sss.sampleset=2
 ; r.streaming.fullyloadusedtextures=1 ; Might break effects
 r.streaming.mipbias=0
 r.subsurfacescattering=1
-r.temporalaa.historyscreenpercentage=200
+; r.temporalaa.historyscreenpercentage=200 ; Slower but less blurry anti aliasing and less ghosting.
 r.temporalaa.r11g11b10history=0
 r.tsr.16bitvalu.nvidia=0
 r.tsr.16bitvalu=0
@@ -364,7 +364,7 @@ r.stencilforloddither=0 ; Slower. Apparently disables early z.
 
 ; LATENCY
 r.fullscreenmode=1 ; 1 seems to be faster
-r.oneframethreadlag=0 ; 1 reduces cpu limitation but increases latency.
+; r.oneframethreadlag=0 ; 1 reduces cpu limitation but increases latency.
 t.maxfps=999
 ; LATENCY
 

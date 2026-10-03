@@ -239,6 +239,8 @@ r.raytracing.skylight.screenpercentage=50
 r.scenecolorformat=4 ; fps cost but 4 is virtually free
 r.ssgi.halfres=1 ; r.diffuseindirect.halfres in ue5 and enabled by default.
 r.ssr.halfresscenecolor=1
+; r.Lumen.ScreenProbeGather.DownsampleFactor=64
+; r.Lumen.Reflections.DownsampleFactor=2
 ; REDUCE RESOLUTION
 
 
@@ -299,10 +301,9 @@ r.shadow.filtermethod=0 ; PCSS costly and noisy.
 r.shadow.virtual.onepassprojection.maxlightsperpixel=8
 r.skyatmosphere.fastskylut=1
 ; r.skylight.realtimereflectioncapture=0 ; Might break effects
-r.skylightintensitymultiplier=0.65
 ; r.ssgi.enable=0 ; Removed in ue5, use dynamicglobalillumination
 r.ssgi.quality=1
-r.ssr.quality=0 ; fps cost even at 1. 4 is equivalent to 1 in cost too.
+; r.ssr.quality=0 ; fps cost even at 1. 4 is equivalent to 1 in cost too.
 r.ssr.stencil=0 ; Slower
 r.sss.burley.numsamplesoverride=0
 r.sss.burley.quality=1
@@ -358,7 +359,10 @@ r.rdg.transientallocator=0 ; slower
 r.rdg.transientextractedresources=0 ; slower
 r.scenedepthhzbasynccompute=0 ; slower than pipeline version.
 r.skyatmosphereasynccompute=0 ; slower than pipeline version
-; r.Lumen.AsyncCompute=0 ; Sometimes slower.
+; r.Lumen.DiffuseIndirect.AsyncCompute=0 ; Might be slower
+r.Lumen.Reflections.AsyncCompute=1
+r.LumenScene.Lighting.AsyncCompute=0
+r.Lumen.TraceMeshSDFs=0
 r.stencilforloddither=0 ; Slower. Apparently disables early z.
 ; COMPUTE
 
